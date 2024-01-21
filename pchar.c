@@ -13,7 +13,7 @@ void s_pchars(stack_t **head, unsigned int counter)
 	h = *head;
 	if (!h)
 	{
-		fprintf(stderr, "L%d: can't s_pchars, stack empty\n", counter);
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
@@ -21,7 +21,7 @@ void s_pchars(stack_t **head, unsigned int counter)
 	}
 	if (h->n > 127 || h->n < 0)
 	{
-		fprintf(stderr, "L%d: can't s_pchars, value out of range\n", counter);
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
